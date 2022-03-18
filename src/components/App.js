@@ -14,7 +14,7 @@ import Planets from "./Planets";
 function App() {
   return (
       <Router>
-        <div>
+        <div className="container-fluid p-0">
           <Navbar />
 
           <Routes>
