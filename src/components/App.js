@@ -1,13 +1,32 @@
 import React from "react";
+import {BrowserRouter  as Router, Routes, Route, Link} from "react-router-dom";
+
 import '../assets/styles/App.css';
 
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
+import Home from "./Home";
+import People from "./People";
+import Starships from "./Starships";
+import Vehicles from "./Vehicles";
+import Species from "./Species";
+import Planets from "./Planets";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-    </div>
+      <Router>
+        <div>
+          <Navbar />
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/people" element={<People />} />
+            <Route path="/starships" element={<Starships />} />
+            <Route path="/vehicles" element={<Vehicles />} />
+            <Route path="/species" element={<Species />} />
+            <Route path="/planets" element={<Planets />} />
+          </Routes>
+        </div>
+      </Router>
   );
 }
 

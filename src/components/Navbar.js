@@ -1,17 +1,11 @@
 import React from "react";
-
-const navItems = [
-  {id: "1", name: "People"},
-  {id: "2", name: "Starships"},
-  {id: "3", name: "Vehicles"},
-  {id: "4", name: "Species"},
-  {id: "5", name: "Planets"}
-];
+import {Link} from "react-router-dom";
+import {navItems} from "./NavbarItems";
 
 function createNavItem(item) {
   return (
     <li key={item.id} className="nav-item">
-      <a className="nav-link" href="#">{item.name}</a>
+      <Link className="nav-link" to={item.name.toLowerCase()}>{item.name}</Link>
     </li>
   );
 }
@@ -20,7 +14,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Star Wars Holocron</a>
+        <Link className="navbar-brand" to="/">Star Wars Holocron</Link>
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
