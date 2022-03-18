@@ -2,7 +2,9 @@ import React from "react";
 
 function Starships() {
   return (
-    <h1>Starships Page</h1>
+    <div className="container">
+      <h1>Starships Page</h1>
+    </div>
   );
 }
 

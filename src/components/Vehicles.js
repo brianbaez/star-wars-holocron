@@ -2,7 +2,9 @@ import React from "react";
 
 function Vehicles() {
   return (
-    <h1>Vehicles Page</h1>
+    <div className="container">
+      <h1>Vehicles Page</h1>
+    </div>
   );
 }
 

@@ -2,7 +2,9 @@ import React from "react";
 
 function People() {
   return (
-    <h1>People Page</h1>
+    <div className="container">
+      <h1>People Page</h1>
+    </div>
   );
 }
 
