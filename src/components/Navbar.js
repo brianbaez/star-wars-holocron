@@ -26,7 +26,10 @@ function Navbar() {
           </ul>
 
           <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
+            <div className="w-50 me-2">
+              <input className="form-control" type="search" placeholder="Search" aria-label="Search"></input>
+            </div>
+
             <button className="btn btn-outline-info" type="submit">Search</button>
           </form>
         </div>
