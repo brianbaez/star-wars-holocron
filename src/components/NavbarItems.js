@@ -1,22 +1,22 @@
 export const navItems = [
   {
     id: "1",
-    name: "People"
+    name: "people"
   },
   {
     id: "2",
-    name: "Starships"
+    name: "starships"
   },
   {
     id: "3",
-    name: "Vehicles"
+    name: "vehicles"
   },
   {
     id: "4",
-    name: "Species"
+    name: "species"
   },
   {
     id: "5",
-    name: "Planets"
+    name: "planets"
   }
 ];
