@@ -25,7 +25,7 @@ function Navbar() {
             {navItems.map(createNavItem)}
           </ul>
 
-          <form className="d-flex">
+          <form className="d-flex justify-content-lg-end">
             <div className="w-50 me-2">
               <input className="form-control" type="search" placeholder="Search" aria-label="Search"></input>
             </div>
