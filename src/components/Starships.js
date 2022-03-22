@@ -1,9 +1,11 @@
 import React from "react";
 
-function Starships() {
+function Starships(props) {
   return (
-    <div className="container">
-      <h1>Starships Page</h1>
+    <div className="container mt-3">
+      {console.log("Starships", props.data)}
+
+      <h1>Starships</h1>
     </div>
   );
 }

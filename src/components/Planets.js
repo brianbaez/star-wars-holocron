@@ -1,9 +1,11 @@
 import React from "react";
 
-function Planets() {
+function Planets(props) {
   return (
-    <div className="container">
-      <h1>Planets Page</h1>
+    <div className="container mt-3">
+      {console.log("Planets", props.data)}
+      
+      <h1>Planets</h1>
     </div>
   );
 }

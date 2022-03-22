@@ -1,9 +1,11 @@
 import React from "react";
 
-function Species() {
+function Species(props) {
   return (
-    <div className="container">
-      <h1>Species Page</h1>
+    <div className="container mt-3">
+      {console.log("Species", props.data)}
+      
+      <h1>Species</h1>
     </div>
   );
 }

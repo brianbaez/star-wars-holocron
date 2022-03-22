@@ -1,9 +1,11 @@
 import React from "react";
 
-function Vehicles() {
+function Vehicles(props) {
   return (
-    <div className="container">
-      <h1>Vehicles Page</h1>
+    <div className="container mt-3">
+      {console.log("Vehicles", props.data)}
+      
+      <h1>vehicles</h1>
     </div>
   );
 }
