@@ -8,10 +8,6 @@
   src: url(../fonts/Star-Jedi.ttf);
 }
 
-* {
-  font-family: "Star-Jedi";
-}
-
-.navbar-brand, .nav-link {
+h1, h6, .navbar-brand, .nav-link, .home-title, .home-description, .btn, .search-bar {
   font-family: "Star-Jedi";
 }
