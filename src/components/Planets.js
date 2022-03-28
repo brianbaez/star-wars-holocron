@@ -1,18 +1,44 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import Pagination from "./Pagination";
+import Loader from "./Loader";
 
 function Planets(props) {
-  let data = props.data;
-  let results = data.results;
+  const [planets, setPlanets] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    async function fetchPlanets() {
+      let result = await fetch("https://swapi.dev/api/planets/?page=" + currentPage + "&format=json");
+      let data = await result.json();
+      setPlanets(data);
+      setLoading(false);
+    }
+
+    fetchPlanets();
+  }, [currentPage]);
+
+  let numPages = Math.ceil(planets.count/10);
+
+  let paginate = pageNumber => {
+    setCurrentPage(pageNumber);
+  }
+
+  if(loading) {
+    return(
+      <Loader />
+    );
+  }
 
   return (
     <div className="container mt-3">
-      {console.log("Planets", props.data)}
+      {console.log("Planets", planets)}
 
       <h1>Planets</h1>
 
       <div className="container">
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
-          {results?.map((planet, i) => {
+          {planets.results?.map((planet, i) => {
             return (
               <div key={planet.name} className="col p-3">
                 <div className="p-1" style={{border: "1px solid gray"}}>
@@ -28,6 +54,8 @@ function Planets(props) {
           })}
         </div>
       </div>
+
+      <Pagination numPages={numPages} paginate={paginate}/>
     </div>
   );
 }

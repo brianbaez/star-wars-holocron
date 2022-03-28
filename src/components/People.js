@@ -1,19 +1,45 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import Pagination from "./Pagination";
+import Loader from "./Loader";
 
-function People(props) {
-  let data = props.data;
-  let results = data.results;
+function People() {
+  const [people, setPeople] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    async function fetchPeople() {
+      let result = await fetch("https://swapi.dev/api/people/?page=" + currentPage + "&format=json");
+      let data = await result.json();
+      setPeople(data);
+      setLoading(false);
+    }
+
+    fetchPeople();
+  }, [currentPage]);
+
+  let numPages = Math.ceil(people.count/10);
+
+  let paginate = pageNumber => {
+    setCurrentPage(pageNumber);
+  }
+
+  if(loading) {
+    return(
+      <Loader />
+    );
+  }
 
   return (
     <div className="container mt-3">
-      {console.log("People", data)}
+      {console.log("People", people)}
 
       <h1>People</h1>
 
       <div className="container">
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
-          {results?.map((person, i) => {
-            return (
+          {people.results?.map((person, i) => {
+            return(
               <div key={person.name} className="col p-3">
                 <div className="p-1" style={{border: "1px solid gray"}}>
                   <h6>{person.name.toLowerCase()}</h6>
@@ -28,6 +54,9 @@ function People(props) {
           })}
         </div>
       </div>
+
+      <Pagination numPages={numPages} paginate={paginate}/>
+
     </div>
   );
 }
