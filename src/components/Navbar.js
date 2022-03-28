@@ -1,11 +1,11 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {navItems} from "./NavbarItems";
 
 function createNavItem(item) {
   return (
     <li key={item.id} className="nav-item">
-      <Link className="nav-link" to={item.name.toLowerCase()}>{item.name}</Link>
+      <NavLink className="nav-link" activeClassName="active" to={item.name.toLowerCase()}>{item.name}</NavLink>
     </li>
   );
 }
@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
-        <Link className="navbar-brand" to="/">Star Wars Holocron</Link>
+        <NavLink className="navbar-brand" to="/">Star Wars Holocron</NavLink>
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
