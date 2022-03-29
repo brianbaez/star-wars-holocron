@@ -1,3 +1,11 @@
+# Star Wars Holocron
+
+## Project Overview
+
+A small web application built with React and Bootstrap that loads data from the [Star Wars API](https://swapi.dev/). The user is able to see information on the people, starships, vehicles, species, and planets in the Star Wars universe.
+
+The website can be viewed [here](https://brianbaez.github.io/star-wars-holocron/).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
