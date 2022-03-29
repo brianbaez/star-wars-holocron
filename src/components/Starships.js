@@ -32,8 +32,6 @@ function Starships(props) {
 
   return (
     <div className="container mt-3">
-      {console.log("Starships", starships)}
-
       <h1>Starships</h1>
 
       <div className="container">

@@ -32,8 +32,6 @@ function People() {
 
   return (
     <div className="container mt-3">
-      {console.log("People", people)}
-
       <h1>People</h1>
 
       <div className="container">

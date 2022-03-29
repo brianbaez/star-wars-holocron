@@ -32,8 +32,6 @@ function Planets(props) {
 
   return (
     <div className="container mt-3">
-      {console.log("Planets", planets)}
-
       <h1>Planets</h1>
 
       <div className="container">

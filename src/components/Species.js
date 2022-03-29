@@ -32,8 +32,6 @@ function Species(props) {
 
   return (
     <div className="container mt-3">
-      {console.log("Species", species)}
-
       <h1>Species</h1>
 
       <div className="container">
