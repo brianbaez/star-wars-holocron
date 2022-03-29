@@ -42,12 +42,16 @@ function Planets(props) {
             return (
               <div key={planet.name} className="col p-3">
                 <div className="p-1" style={{border: "1px solid gray"}}>
-                  <h6>{planet.name.toLowerCase()}</h6>
+                  <h5>{planet.name.toLowerCase()}</h5>
 
-                  <p>Population: {planet.population}</p>
-                  <p>Climate: {planet.climate}</p>
-                  <p>Terrain: {planet.terrain}</p>
-                  <p>Gravity: {planet.gravity}</p>
+                  <div className="stats">
+                    <p><strong>Population:</strong> {planet.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+                    <p><strong>Climate:</strong> {planet.climate}</p>
+                    <p><strong>Terrain:</strong> {planet.terrain}</p>
+                    <p><strong>Gravity:</strong> {planet.gravity}</p>
+                    <p><strong>Rotation Period:</strong> {planet.rotation_period} hours</p>
+                    <p><strong>Orbital Period:</strong> {planet.orbital_period} days</p>
+                  </div>
                 </div>
               </div>
             );

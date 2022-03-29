@@ -42,12 +42,16 @@ function People() {
             return(
               <div key={person.name} className="col p-3">
                 <div className="p-1" style={{border: "1px solid gray"}}>
-                  <h6>{person.name.toLowerCase()}</h6>
+                  <h5>{person.name.toLowerCase()}</h5>
 
-                  <p>Birth Year: {person.birth_year}</p>
-                  <p>Gender: {person.gender}</p>
-                  <p>Eye Color: {person.eye_color}</p>
-                  <p>Height: {person.height}</p>
+                  <div className="stats">
+                    <p><strong>Birth Year:</strong> {person.birth_year}</p>
+                    <p><strong>Gender:</strong> {person.gender}</p>
+                    <p><strong>Eye Color:</strong> {person.eye_color}</p>
+                    <p><strong>Hair Color:</strong> {person.hair_color}</p>
+                    <p><strong>Height:</strong> {person.height} cm</p>
+                    <p><strong>Mass:</strong> {person.mass} kg</p>
+                  </div>
                 </div>
               </div>
             );

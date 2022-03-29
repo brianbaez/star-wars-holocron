@@ -42,13 +42,15 @@ function Starships(props) {
             return (
               <div key={starship.name} className="col p-3">
                 <div className="p-1" style={{border: "1px solid gray"}}>
-                  <h6>{starship.name.toLowerCase()}</h6>
+                  <h5>{starship.name.toLowerCase()}</h5>
 
-                  <p>Model: {starship.model}</p>
-                  <p>Cost: {starship.cost_in_credits} credits</p>
-                  <p>Hyperdrive Rating: {starship.hyperdrive_rating}</p>
-                  <p>Length: {starship.length}</p>
-                  <p>Max Speed: {starship.max_atmosphering_speed}</p>
+                  <div className="stats">
+                    <p><strong>Model:</strong> {starship.model}</p>
+                    <p><strong>Cost:</strong> {starship.cost_in_credits.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} credits</p>
+                    <p><strong>Hyperdrive Rating:</strong> {starship.hyperdrive_rating}</p>
+                    <p><strong>Length:</strong> {starship.length} m</p>
+                    <p><strong>Max Speed:</strong> {starship.max_atmosphering_speed} km/h</p>
+                  </div>
                 </div>
               </div>
             );

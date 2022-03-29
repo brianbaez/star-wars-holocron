@@ -42,11 +42,16 @@ function Species(props) {
             return (
               <div key={species.name} className="col p-3">
                 <div className="p-1" style={{border: "1px solid gray"}}>
-                  <h6>{species.name.toLowerCase()}</h6>
+                  <h5>{species.name.toLowerCase()}</h5>
 
-                  <p>Average Lifespan: {species.average_lifespan}</p>
-                  <p>Average Height: {species.average_height}</p>
-                  <p>Language: {species.language}</p>
+                  <div className="stats">
+                    <p><strong>Classification:</strong> {species.classification}</p>
+                    <p><strong>Language:</strong> {species.language}</p>
+                    <p><strong>Average Lifespan:</strong> {species.average_lifespan} years</p>
+                    <p><strong>Average Height:</strong> {species.average_height} cm</p>
+                    <p><strong>Skin Colors:</strong> {species.skin_colors}</p>
+                    <p><strong>Eye Colors:</strong> {species.eye_colors}</p>
+                  </div>
                 </div>
               </div>
             );

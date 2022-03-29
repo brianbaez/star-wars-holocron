@@ -42,12 +42,14 @@ function Vehicles(props) {
             return (
               <div key={vehicle.name} className="col p-3">
                 <div className="p-1" style={{border: "1px solid gray"}}>
-                  <h6>{vehicle.name.toLowerCase()}</h6>
+                  <h5>{vehicle.name.toLowerCase()}</h5>
 
-                  <p>Model: {vehicle.model}</p>
-                  <p>Cost: {vehicle.cost_in_credits} credits</p>
-                  <p>Length: {vehicle.length}</p>
-                  <p>Max Speed: {vehicle.max_atmosphering_speed}</p>
+                  <div className="stats">
+                    <p><strong>Model:</strong> {vehicle.model}</p>
+                    <p><strong>Cost:</strong> {vehicle.cost_in_credits.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} credits</p>
+                    <p><strong>Length:</strong> {vehicle.length} m</p>
+                    <p><strong>Max Speed:</strong> {vehicle.max_atmosphering_speed} km/h</p>
+                  </div>
                 </div>
               </div>
             );
