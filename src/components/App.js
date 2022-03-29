@@ -13,7 +13,7 @@ import Planets from "./Planets";
 
 function App() {
   return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="container-fluid p-0">
           <Navbar />
 
