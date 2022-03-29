@@ -24,14 +24,6 @@ function Navbar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             {navItems.map(createNavItem)}
           </ul>
-
-          <form className="d-flex justify-content-lg-end">
-            <div className="w-50 me-2">
-              <input className="search-bar form-control" type="search" placeholder="Search" aria-label="Search"></input>
-            </div>
-
-            <button className="btn btn-outline-info" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
