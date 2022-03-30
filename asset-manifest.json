@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/star-wars-holocron/static/css/main.a89eb658.css",
+    "main.css": "/star-wars-holocron/static/css/main.62b00e21.css",
     "main.js": "/star-wars-holocron/static/js/main.3528966e.js",
     "static/media/holocrons.png": "/star-wars-holocron/static/media/holocrons.ad604b6ee761ce42d486.png",
     "static/media/Star-Jedi.ttf": "/star-wars-holocron/static/media/Star-Jedi.8d577dc1e1755c4860f3.ttf",
     "index.html": "/star-wars-holocron/index.html",
-    "main.a89eb658.css.map": "/star-wars-holocron/static/css/main.a89eb658.css.map",
+    "main.62b00e21.css.map": "/star-wars-holocron/static/css/main.62b00e21.css.map",
     "main.3528966e.js.map": "/star-wars-holocron/static/js/main.3528966e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a89eb658.css",
+    "static/css/main.62b00e21.css",
     "static/js/main.3528966e.js"
   ]
 }
