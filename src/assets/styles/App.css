@@ -3,7 +3,7 @@
   src: url(../fonts/Star-Jedi.ttf);
 }
 
-h1, h2, h5, .navbar-brand, .nav-link, .home-title, .home-description {
+h1, h2, h5, a, .navbar-brand, .nav-link, .home-title, .home-description {
   font-family: "Star-Jedi";
 }
 
